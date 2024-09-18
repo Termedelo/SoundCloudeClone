@@ -25,27 +25,39 @@ height: 7vh;
     align-items: center;
 }
 #toTheLeft{
-    margin-left: -50px;
+    margin-left: -30px;
     background-color: orangered;
-    padding: 5px;
+    height: 100%;
+    padding: 10px 27px 0px 17px;
     color: #fefefefe;
-    border-radius: 5px;
 }
 
 .home{
-    margin-left: -50px;
-    padding:px
+    margin-left: -70px;
+    height: 100%;
+    padding:10px 27px 0;
+    border-right: solid black 1px;
+    background-color: black;
 }
 .feed{
     margin-left: -50px;
-    padding-left: 20px;
+    height: 100%;
+    padding: 10px 27px 0px 17px;
+    border-right: solid black 1px;
+    
 }
 .library{
     margin-left: -50px;
-    padding-left: 20px;
+    height: 100%;
+    padding: 10px 27px 0px 17px;
+    border-right: solid black 1px;
+    
 }
 
+
+/* done the left part of the navbar */
 .search{
+    background-color: white;
 }
 .right{
     display: flex;
