@@ -82,3 +82,57 @@ height: 45px;
 #toTheRight{
     margin-left: 10px;
 }
+
+
+.pro a{
+    text-decoration: none;
+    color: #f50;
+    font-size: 14px;
+}
+.pro{
+    padding-left: 15px;
+    height: 30px;
+    margin-top: 10px;
+}
+.pro a:hover{
+    color: #f70;
+}
+
+.artist{
+    padding-left: 15px;
+    height: 30px;
+    margin-top: 10px;
+}
+.artist:hover{
+    color: var(--hovered-color);
+}
+.upload{
+    padding-left: 20px;
+    height: 30px;
+    margin-top: 10px;
+}
+.upload:hover{
+    color: var(--hovered-color);
+}
+.userDownList{
+    padding-left: 20px;
+    margin-left: -25px;
+}
+
+
+
+
+
+
+
+.btn {
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--font-color);
+    cursor: pointer;
+}
+.btn:hover{
+    color: var(--hovered-color);
+}
