@@ -10,53 +10,67 @@ body{
     font-size: 14px;
 }
 
-
 div.row{
 background-color: var(--primary-color);
 color:var(--font-color);
-
-height: 7vh;
+height: 45px;
 }
-
 .left{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    text-align: center;
+    padding-right: 0;
 }
 #toTheLeft{
-    margin-left: -30px;
     background-color: orangered;
     height: 100%;
-    padding: 10px 27px 0px 17px;
-    color: #fefefefe;
+    border-radius: 50px;
+    padding-top: 10px;
+    color: white;
 }
 
 .home{
-    margin-left: -70px;
     height: 100%;
-    padding:10px 27px 0;
+    padding-top: 10px;
     border-right: solid black 1px;
     background-color: black;
 }
 .feed{
-    margin-left: -50px;
     height: 100%;
-    padding: 10px 27px 0px 17px;
+    padding-top: 10px;
     border-right: solid black 1px;
-    
 }
 .library{
-    margin-left: -50px;
     height: 100%;
-    padding: 10px 27px 0px 17px;
+    padding-top: 10px;
     border-right: solid black 1px;
-    
 }
-
-
 /* done the left part of the navbar */
 .search{
+    position: relative;
+}
+.search i{
+    color: var(--primary-color);
+    position: absolute;
+    font-size: 18px;
+    right: -31px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+}
+.search input{
+    width: calc(100% + 50px);
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding-left: 11px;
+    background-color: #e5e5e5;
+    color: #666;
+    transition: 0.5s;
+}
+.search input:focus{
     background-color: white;
 }
 .right{
@@ -68,4 +82,3 @@ height: 7vh;
 #toTheRight{
     margin-left: 10px;
 }
-
