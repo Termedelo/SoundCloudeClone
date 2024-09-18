@@ -1,0 +1,59 @@
+:root{
+    --primary-color: #333;
+    --font-color:#ccc;
+    --hovered-color:#fff;
+}
+
+
+body{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+
+div.row{
+background-color: var(--primary-color);
+color:var(--font-color);
+
+height: 7vh;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#toTheLeft{
+    margin-left: -50px;
+    background-color: orangered;
+    padding: 5px;
+    color: #fefefefe;
+    border-radius: 5px;
+}
+
+.home{
+    margin-left: -50px;
+    padding:px
+}
+.feed{
+    margin-left: -50px;
+    padding-left: 20px;
+}
+.library{
+    margin-left: -50px;
+    padding-left: 20px;
+}
+
+.search{
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+#toTheRight{
+    margin-left: 10px;
+}
+
