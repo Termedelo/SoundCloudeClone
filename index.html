@@ -12,16 +12,24 @@
     crossorigin="anonymous"
     />
     <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav_sidebar_bottom-nav.css">
   </head>
   <body>
       <nav class="container-fluid">
-         <div class="row">
+        <div class="row">
               <div class="col-4 left container">
-                <div class="logo col-3">FUCKERS &nbsp; <i class="fa-solid fa-headphones"></i></div>
-                <div class="home col-3">home</div>
-                <div class="feed col-3">feed</div>
-                <div class="library col-3">library</div>
+                <div class="logo col-3">
+                  <a href="index.html">FUCKERS</a> &nbsp; <i class="fa-solid fa-headphones"></i>
+                </div>
+                <div class="home col-3">
+                  <a href="index.html">home</a>
+                </div>
+                <div class="feed col-3">
+                  <a href="feed.html">feed</a>
+                </div>
+                <div class="library col-3">
+                  <a href="library.html">library</a>
+                </div>
               </div>
               <div class="col-3 search" >
                 <input type="text" placeholder="Search">
@@ -32,28 +40,73 @@
                 <div class="artist col-2">for artists</div> 
                 <div class="upload col-2">upload</div>
                 <div class="userDownList col-2"> 
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/user imgjpg.jpg"  width="30" height="30" style="border-radius: 50%;">
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">profile</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">likes</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">playlist</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">stations</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">following</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">want to following</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">try next pro</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">tracks</a></li>
-                                    <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">distribute</a></li>
-                                </ul>
-                                </li>
-                            </ul>
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="assets/user imgjpg.jpg"  width="30" height="30" style="border-radius: 50%;">
+                      </button>
+                      <ul class="dropdown-menu">
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">profile</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">likes</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">playlist</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">stations</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">following</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">want to following</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">try next pro</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">tracks</a></li>
+                          <li><i class="fa-solid fa-web-awesome"></i><a class="dropdown-item" href="#">distribute</a></li>
+                      </ul>
+                      </li>
+                  </ul>
                 </div>
-                <div class="notification btn col-1"><i class="fa-solid fa-bell"></i></div>
-                <div class="messages btn col-1"><i class="fa-solid fa-envelope"></i></div>
-                <div class="moreDownList btn col-1"><i class="fa-solid fa-ellipsis"></i></div>
+                <div class="bellDownList col-1"> 
+                  <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                      <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-bell"></i>                     
+                      </button>
+                      <ul class="dropdown-menu">
+                        <div class="top">
+                          <h6>Notification</h6>
+                          <div>settings</div>
+                        </div>
+                        <div class="center">
+                          <p>no notification</p>
+                        </div>
+                        <div class="bottom">
+                          <p>view all notifications</p>
+                        </div>
+                      </ul>
+                      </li>
+                  </ul>
+                </div>
+                <div class="messages col-1">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-envelope"></i> 
+                    </button>
+                    <ul class="dropdown-menu">
+                      <div class="top">
+                        <h6>Messages</h6>
+                      </div>
+                      <div class="center">
+                        <p>no Messages</p>
+                      </div>
+                      <div class="bottom">
+                        <p>view all Messages</p>
+                      </div>
+                    </ul>
+                    </li>
+                </ul>
+                </div>    
+                <div class="moreDownList btn col-1">
+
+
+
+                  <i class="fa-solid fa-ellipsis"></i>
+                
+                </div>
               </div>
           </div>
       </nav>

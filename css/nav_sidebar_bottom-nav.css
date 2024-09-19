@@ -8,7 +8,7 @@ body{
     font-size: 14px;
 }
 
-/* Start Of the left part of the navbar */
+/* Start Of the navbar */
 nav .row{
 background-color: var(--primary-color);
 color:var(--font-color);
@@ -30,27 +30,44 @@ nav .row .left .logo{
     padding-top: 10px;
     color: white;
 }
+nav .row .left .logo a{
+    text-decoration: none;
+    color: white;
+}
 nav .row .left .home{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
     background-color: black;
-    color: white;
+}
+nav .row .left .home a{
+    color: #ccc;
+    text-decoration: none;
 }
 nav .row .left .feed{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
 }
+nav .row .left .feed a{
+    color: #ccc;
+    text-decoration: none;
+}
 nav .row .left .library{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
 }
-nav .row .left .feed:hover, 
-nav .row .left .library:hover{
-   color: white;
+nav .row .left .library a{
+    color: #ccc;
+    text-decoration: none;
 }
+nav .row .left .feed a:hover, 
+nav .row .left .library a:hover,
+nav .row .left .home a:hover{
+    color: white;
+}
+
 /* End Of the left part of the navbar */
 
 /* Start Of the Center part of the navbar */
@@ -130,6 +147,71 @@ nav .row .right .userDownList ul .nav-item .dropdown-menu li{
 nav .row .right .userDownList ul .nav-item .dropdown-menu li i{
     padding-left: 10px;
 }
+
+.bellDownList .dropdown-toggle::after{
+    display: none;
+}
+
+div.bellDownList.col-1 > ul > li > ul{
+    width: 415px;
+    margin-right: -105px !important;
+    padding: 10px;
+    
+}
+.dropdown-menu .top{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px lightgray;
+}
+.dropdown-menu .top div{
+    font-size: 12px;
+    color: lightgray;
+}
+.dropdown-menu .top div:hover{
+    color: black;
+}
+div.bellDownList.col-1 div.center > p{
+    text-align: center;
+    padding-top: 1rem;
+    color: #aaa;
+    font-size: 14px;
+}
+div.bellDownList.col-1 div.bottom > p{
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.messages .dropdown-toggle::after{
+    display: none;
+}
+
+div.messages.col-1 > ul > li > ul{
+    width:410px;
+    margin-right: -50px !important;
+    padding: 10px;
+}
+
+.messages.col-1.dropdown-menu .top{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px lightgray;
+}
+div.messages.col-1 div.center > p{
+    text-align: center;
+    padding-top: 1rem;
+    color: #aaa;
+    font-size: 14px;
+}
+div.messages.col-1 div.bottom > p{
+    text-align: center;
+    font-size: 14px;
+    margin: 0px;
+}
+
+
+
+
 .btn {
     border: none;
     background-color: transparent;
@@ -139,4 +221,39 @@ nav .row .right .userDownList ul .nav-item .dropdown-menu li i{
 .btn:hover{
     color: var(--hovered-color);
 }
+
+
+/* 
+1-fuck sound cloud 
+2-the last 3 icons need to be a dropdown 
+*/
+
+
+
+
+
+
+
 /* End Of the Right part of the navbar */
+
+
+
+
+
+/* Start Of sidebar */
+
+
+
+
+/* End Of sidebar */
+
+
+/* Start OF bottom nav */
+
+
+
+/* End OF bottom nav */
+
+
+
+
