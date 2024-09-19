@@ -246,35 +246,12 @@ div.messages.col-1 div.bottom > p{
 .btn:hover{
     color: var(--hovered-color);
 }
-
-
-/* 
-1-fuck sound cloud 
-2-the last 3 icons need to be a dropdown 
-*/
-
-
-
-
-
-
-
 /* End Of the Right part of the navbar */
 
-
-
-
-
-/* Start Of sidebar */
-
-
-
-
-/* End Of sidebar */
-
-
 /* Start OF bottom nav */
-
-
-
+.play{
+    height: 60px;
+    padding: 0px 50px;
+    background-color: #ccc;
+  }
 /* End OF bottom nav */
