@@ -26,7 +26,6 @@ nav .row .left{
 nav .row .left .logo{
     background-color: orangered;
     height: 100%;
-    border-radius: 50px;
     padding-top: 10px;
     color: white;
 }
@@ -36,38 +35,48 @@ nav .row .left .logo a{
 }
 nav .row .left .home{
     height: 100%;
-    padding-top: 10px;
     border-right: solid black 1px;
-    background-color: black;
 }
 nav .row .left .home a{
     color: #ccc;
+    height: 100%;
+    display: block;
+    padding-top: 10px;
     text-decoration: none;
 }
 nav .row .left .feed{
     height: 100%;
-    padding-top: 10px;
     border-right: solid black 1px;
 }
 nav .row .left .feed a{
     color: #ccc;
+    height: 100%;
+    padding-top: 10px;
+    display: block;
     text-decoration: none;
 }
 nav .row .left .library{
     height: 100%;
-    padding-top: 10px;
     border-right: solid black 1px;
 }
 nav .row .left .library a{
     color: #ccc;
+    height: 100%;
+    padding-top: 10px;
+    display: block;
     text-decoration: none;
 }
+nav .row .left .home a:hover,
 nav .row .left .feed a:hover, 
-nav .row .left .library a:hover,
-nav .row .left .home a:hover{
+nav .row .left .library a:hover{
     color: white;
 }
-
+.active{
+    background-color: black;
+}
+.active:hover a{
+    color: #ccc !important;
+}
 /* End Of the left part of the navbar */
 
 /* Start Of the Center part of the navbar */
@@ -113,7 +122,7 @@ nav .row .right .pro{
 }
 nav .row .right .pro a{
     text-decoration: none;
-    color: #f50;
+    color: #f70;
     font-size: 14px;
     margin-left: 28px;
 }
@@ -140,14 +149,23 @@ nav .row .right .userDownList{
     padding-left: 20px;
     margin-left: -25px;
 }
+/* 
+.userDownList .dropdown-toggle::after{
+
+} 
+*/
 nav .row .right .userDownList ul .nav-item .dropdown-menu li{
     display: flex;
     align-items: center;
 }
 nav .row .right .userDownList ul .nav-item .dropdown-menu li i{
     padding-left: 10px;
+    color: #aaa;
 }
-
+div.userDownList.col-2 > ul > li > ul > li:active,
+div.userDownList.col-2 > ul > li > ul > li >a:active{
+background-color: #f50;
+}
 .bellDownList .dropdown-toggle::after{
     display: none;
 }
@@ -192,6 +210,10 @@ div.messages.col-1 > ul > li > ul{
     padding: 10px;
 }
 
+div.moreDownList.col-1 > ul > li > ul > li > a:active{
+background-color: #f50;
+}
+
 .messages.col-1.dropdown-menu .top{
     display: flex;
     justify-content: space-between;
@@ -208,10 +230,13 @@ div.messages.col-1 div.bottom > p{
     font-size: 14px;
     margin: 0px;
 }
-
-
-
-
+.moreDownList .dropdown-toggle::after{
+    display: none;
+}
+#borderUnder{
+    border-bottom: solid 1px lightgray;
+    padding-bottom: 10px;
+}
 .btn {
     border: none;
     background-color: transparent;
@@ -253,7 +278,3 @@ div.messages.col-1 div.bottom > p{
 
 
 /* End OF bottom nav */
-
-
-
-
