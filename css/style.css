@@ -3,62 +3,61 @@
     --font-color:#ccc;
     --hovered-color:#fff;
 }
-
-
 body{
     text-transform: capitalize;
     font-size: 14px;
 }
 
-div.row{
+/* Start Of the left part of the navbar */
+nav .row{
 background-color: var(--primary-color);
 color:var(--font-color);
 height: 45px;
 }
-.left{
+nav .row .left{
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: center;
     padding-right: 0;
+    color: #bbb;
+    transition: 0.5s;
 }
-#toTheLeft{
+nav .row .left .logo{
     background-color: orangered;
     height: 100%;
     border-radius: 50px;
     padding-top: 10px;
     color: white;
 }
-
-.home{
+nav .row .left .home{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
     background-color: black;
+    color: white;
 }
-.feed{
+nav .row .left .feed{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
 }
-.library{
+nav .row .left .library{
     height: 100%;
     padding-top: 10px;
     border-right: solid black 1px;
 }
-/* done the left part of the navbar */
-.search{
+nav .row .left .feed:hover, 
+nav .row .left .library:hover{
+   color: white;
+}
+/* End Of the left part of the navbar */
+
+/* Start Of the Center part of the navbar */
+nav .row .search{
     position: relative;
 }
-.search i{
-    color: var(--primary-color);
-    position: absolute;
-    font-size: 18px;
-    right: -31px;
-    top: calc(50% - 2px);
-    transform: translateY(-50%);
-}
-.search input{
+nav .row .search input{
     width: calc(100% + 50px);
     margin-top: 5px;
     height: 30px;
@@ -70,70 +69,74 @@ height: 45px;
     color: #666;
     transition: 0.5s;
 }
-.search input:focus{
+nav .row .search i{
+    color: var(--primary-color);
+    position: absolute;
+    font-size: 18px;
+    right: -31px;
+    top: calc(50% - 2px);
+    transform: translateY(-50%);
+}
+nav .row .search input:focus{
     background-color: white;
 }
-.right{
+/* End Of the Center part of the navbar */
+
+/* Start Of the Right part of the navbar */
+nav .row .right{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-#toTheRight{
-    margin-left: 10px;
+nav .row .right .pro{
+    padding-left: 15px;
+    height: 30px;
+    margin-top: 10px;
 }
-
-
-.pro a{
+nav .row .right .pro a{
     text-decoration: none;
     color: #f50;
     font-size: 14px;
     margin-left: 28px;
 }
-.pro{
-    padding-left: 15px;
-    height: 30px;
-    margin-top: 10px;
-}
-.pro a:hover{
+nav .row .right .pro a:hover{
     color: #f70;
 }
-
-.artist{
+nav .row .right .artist{
     padding-left: 15px;
     height: 30px;
     margin-top: 10px;
 }
-.artist:hover{
+nav .row .right .artist:hover{
     color: var(--hovered-color);
 }
-.upload{
+nav .row .right .upload{
     padding-left: 20px;
     height: 30px;
     margin-top: 10px;
 }
-.upload:hover{
+nav .row .right .upload:hover{
     color: var(--hovered-color);
 }
-.userDownList{
+nav .row .right .userDownList{
     padding-left: 20px;
     margin-left: -25px;
 }
-
-
-
-
-
-
-
+nav .row .right .userDownList ul .nav-item .dropdown-menu li{
+    display: flex;
+    align-items: center;
+}
+nav .row .right .userDownList ul .nav-item .dropdown-menu li i{
+    padding-left: 10px;
+}
 .btn {
     border: none;
     background-color: transparent;
-    margin-left: 10px;
-    margin-right: 10px;
     color: var(--font-color);
     cursor: pointer;
 }
 .btn:hover{
     color: var(--hovered-color);
 }
+/* End Of the Right part of the navbar */
