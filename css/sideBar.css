@@ -1,0 +1,110 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.content .side-bar {
+}
+.content .side-bar .row1 {
+  height: 27%;
+}
+.content .side-bar .row1 .artists {
+  color: #bbb;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #bbb;
+}
+.content .side-bar .row1 .artists .left,
+.content .side-bar .row1 .artists .right {
+  position: relative;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+.content .side-bar .row1 .artists .left i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row1 .artists .right i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row1 .artists:hover .right {
+  color: black;
+}
+
+.content .side-bar .row1 .TheArtists {
+  height: 55px;
+  margin-top: 10px;
+}
+.content .side-bar .row1 .TheArtists .row {
+}
+.content .side-bar .row1 .TheArtists .row .left img {
+  border-radius: 50%;
+  margin-left: 40px;
+}
+.content .side-bar .row1 .TheArtists .row .center {
+  position: relative;
+  margin: 0 0 0 -10px;
+}
+.content .side-bar .row1 .TheArtists .row .center p {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 18px;
+}
+.content .side-bar .row1 .TheArtists .row .center::before {
+  content: "\f004\00a0\00a0 999";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  top: calc(50% + 6px);
+  left: 12px;
+  font-size: 12px;
+}
+.content .side-bar .row1 .TheArtists .row .center::after {
+  content: "\f001\00a0\00a0 333";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  position: absolute;
+  top: calc(50% + 6px);
+  left: 65px;
+  font-size: 12px;
+}
+.content .side-bar .row1 .TheArtists .row .right button {
+  width: 111px;
+  margin-top: 27px;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  height: 29px;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+.content .side-bar .row1 .TheArtists .row .right button:hover {
+  border-color: rgb(0 0 0 / 20%);
+}
+.content .side-bar .row1 .TheArtists .row .right button p {
+  margin: 0 0 0 -2px;
+}
+.content .side-bar .row1 .TheArtists .row .right button i {
+  margin-top: 3px;
+}
+.content .side-bar .row2 {
+  height: 25%;
+  background-color: Blue;
+}
+.content .side-bar .row3 {
+  height: 25%;
+  background-color: red;
+}
+.content .side-bar .row4 {
+  height: 23%;
+  background-color: yellow;
+}

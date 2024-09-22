@@ -1,3 +1,217 @@
-.content{
-  padding: 0px 50px;
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.main{
+  border-right: solid 2px #eee;
+}
+.main .slider {
+  height: 250px;
+  text-transform: capitalize;
+  overflow: hidden;
+  position: relative;
+}
+.main .slider span {
+  display: flex;
+}
+
+.main .slideLeft {
+  width: 35px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.main .slider .slideRight {
+  width: 35px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+.main .slider .slideLeft::before {
+  content: "\f177";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  background-color: rgb(255 255 255 / 100%);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: gray;
+  border: solid 1px #aaa;
+  transition: 0.2s;
+}
+.main .slider .slideRight::after {
+  content: "\f178";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  background-color: rgb(255 255 255 / 100%);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: gray;
+  border: solid 1px #aaa;
+  transition: 0.2s;
+}
+.main .slider .slideLeft:hover::before,
+.main .slider .slideRight:hover::after {
+  color: #ff3300;
+  border-color: #ff3300;
+}
+.main .slider span .card {
+  width: 150px;
+  height: 210px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.main .slider span .card:nth-child(1) {
+  left: 10px;
+}
+.main .slider span .card:nth-child(2) {
+  left: 190px;
+}
+.main .slider span .card:nth-child(3) {
+  left: 370px;
+}
+.main .slider span .card:nth-child(4) {
+  left: 550px;
+}
+.main .slider span .card:nth-child(5) {
+  left: 730px;
+}
+.main .slider span .card:nth-child(6) {
+  left: 910px;
+}
+.main .slider span .card:nth-child(7) {
+  left: 1090px;
+}
+.main .slider span .card:nth-child(8) {
+  left: 1270px;
+}
+.main .slider span .card:nth-child(9) {
+  left: 1450px;
+}
+.main .slider span .card:nth-child(10) {
+  left: 1630px;
+}
+.main .slider span .card:nth-child(11) {
+  left: 1820px;
+}
+.main .slider span .card:nth-child(12) {
+  left: 2010px;
+}
+.main .slider span .card:nth-child(13) {
+  left: 2200px;
+}
+.main .slider span .card:nth-child(14) {
+  left: 2390px;
+}
+.main .slider span .card:nth-child(15) {
+  left: 2580px;
+}
+.main .slider span .card:nth-child(16) {
+  left: 2770px;
+}
+.main .slider span .card:nth-child(17) {
+  left: 2960px;
+}
+.main .slider span .card:nth-child(18) {
+  left: 3150px;
+}
+.main .slider span .card:nth-child(19) {
+  left: 3340px;
+}
+.main .slider span .card:nth-child(20) {
+  left: 3530px;
+}
+@keyframes juggle {
+  to {
+    margin-left: -10px;
+  }
+}
+.main .slider .slideRight:hover + span .card {
+  animation-name: juggle;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+.main .slider span .card .image {
+  width: 150px;
+  height: 150px;
+  background-image: url(/assets/Eminim.jpg);
+  background-size: cover;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main .slider span .card .image i {
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+  color: #eee;
+  cursor: pointer;
+}
+.main .slider span .card .image i:first-child {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  background-color: orangered;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+.main .slider span .card .image i:nth-child(2) {
+  left: 70%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+.main .slider span .card .image i:last-child {
+  left: 90%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+.main .slider span .card .image:hover {
+  box-shadow: 0 -15px 30px -20px rgb(255 255 255 / 30%) inset;
+}
+.main .slider span .card .image:hover i:first-child,
+.main .slider span .card .image:hover i:nth-child(2),
+.main .slider span .card .image:hover i:last-child {
+  opacity: 1;
+}
+.main .slider span .card .image i:nth-child(2):hover,
+.main .slider span .card .image i:last-child:hover {
+  color: white;
+}
+.main .slider span .card .image i:first-child:hover {
+  background-color: #ff3300;
+  color: white;
+}
+.main .slider span .card h4,
+.main .slider span .card p {
+  text-align: center;
+  margin: 5px 0px;
+  font-size: 15px;
+}
+.content .row .main h1{
+  font-size: 30px;
+  margin: 20px 0 0;
+  font-weight: 600;
 }
