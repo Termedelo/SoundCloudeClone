@@ -281,3 +281,24 @@ followBtn2.addEventListener("click", () => {
 followBtn3.addEventListener("click", () => {
   follow(followBtn3, icon3, par3);
 });
+//!///////////////////////////////////////////////////////////////////////
+
+let row2Arr = document.querySelectorAll(
+  ".content .side-bar .row2 .TheSongs .row .center .description #buttons .like"
+);
+let row3Arr = document.querySelectorAll(
+  ".content .side-bar .row3 .TheSongs .row .center .description #buttons .like"
+);
+function changingColors(Arr) {
+  for (let i = 0; i < Arr.length; i++) {
+    Arr[i].addEventListener("click", (e) => {
+      if (e.target.style.color === "orangered") {
+        e.target.style.color = "#aaa";
+      } else {
+        e.target.style.color = "orangered";
+      }
+    });
+  }
+}
+changingColors(row2Arr);
+changingColors(row3Arr);

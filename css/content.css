@@ -2,7 +2,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.main{
+.main {
   border-right: solid 2px #eee;
 }
 .main .slider {
@@ -210,7 +210,7 @@ body {
   margin: 5px 0px;
   font-size: 15px;
 }
-.content .row .main h1{
+.content .row .main h1 {
   font-size: 30px;
   margin: 20px 0 0;
   font-weight: 600;

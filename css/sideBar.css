@@ -1,11 +1,6 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
 }
-.content .side-bar {
-}
-.content .side-bar .row1 {
-  height: 27%;
-}
 .content .side-bar .row1 .artists {
   color: #bbb;
   display: flex;
@@ -40,8 +35,6 @@ body {
 .content .side-bar .row1 .TheArtists {
   height: 55px;
   margin-top: 10px;
-}
-.content .side-bar .row1 .TheArtists .row {
 }
 .content .side-bar .row1 .TheArtists .row .left img {
   border-radius: 50%;
@@ -96,15 +89,309 @@ body {
 .content .side-bar .row1 .TheArtists .row .right button i {
   margin-top: 3px;
 }
-.content .side-bar .row2 {
-  height: 25%;
-  background-color: Blue;
+.content .side-bar .row2 .Songs {
+  color: #bbb;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #bbb;
+  column-gap: 108px;
 }
-.content .side-bar .row3 {
-  height: 25%;
-  background-color: red;
+.content .side-bar .row2 .Songs .left,
+.content .side-bar .row2 .Songs .right {
+  position: relative;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: 0.2s;
 }
-.content .side-bar .row4 {
-  height: 23%;
-  background-color: yellow;
+.content .side-bar .row2 .Songs .left i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row2 .Songs .right i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row2 .Songs:hover .right {
+  color: black;
+}
+.content .side-bar .row2 .TheSongs {
+  height: 55px;
+  margin-top: 10px;
+  padding-bottom: 60px;
+}
+.content .side-bar .row2 .TheSongs .left {
+  position: relative;
+}
+.content .side-bar .row2 .TheSongs .row .left img {
+  border-radius: 10px;
+  margin-left: 40px;
+}
+.content .side-bar .row2 .TheSongs .row .left i {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 61px;
+  background-color: orangered;
+  padding: 9px 11px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.content .side-bar .row2 .TheSongs .row:hover .left i {
+  opacity: 0.9;
+}
+.content .side-bar .row2 .TheSongs .row .center {
+  position: relative;
+  margin: 4px 0 0 -10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content .side-bar .row2 .TheSongs .row .center p {
+  margin: -4px 0 -8px;
+  font-size: 18px;
+}
+.content .side-bar .row2 .TheSongs .row .center .description {
+  position: relative;
+}
+.content .side-bar .row2 .TheSongs .row .center .description #buttons {
+  margin-left: 30px;
+  position: absolute;
+  left: 200px;
+}
+.content .side-bar .row2 .TheSongs .row .center .description #buttons button {
+  outline: none;
+  border: 1px solid #aaa;
+  opacity: 0;
+  color: #aaa;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.content
+  .side-bar
+  .row2
+  .TheSongs
+  .row:hover
+  .center
+  .description
+  #buttons
+  button {
+  opacity: 0.9;
+}
+.content
+  .side-bar
+  .row2
+  .TheSongs
+  .row
+  .center
+  .description
+  #buttons
+  button:hover {
+  border-color: orangered;
+}
+.content .side-bar .row2 .TheSongs .row .things {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 107px 0 0;
+  margin-top: -5px;
+}
+/*/////////////////////////////////////////////////////*/
+.content .side-bar .row3 .Songs {
+  color: #bbb;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #bbb;
+}
+.content .side-bar .row3 .Songs .left,
+.content .side-bar .row3 .Songs .right {
+  position: relative;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+.content .side-bar .row3 .Songs .left i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row3 .Songs .right i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row3 .Songs:hover .right {
+  color: black;
+}
+.content .side-bar .row3 .TheSongs {
+  height: 55px;
+  margin-top: 10px;
+  padding-bottom: 60px;
+}
+.content .side-bar .row3 .TheSongs .left {
+  position: relative;
+}
+.content .side-bar .row3 .TheSongs .row .left img {
+  border-radius: 10px;
+  margin-left: 40px;
+}
+.content .side-bar .row3 .TheSongs .row .left i {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 61px;
+  background-color: orangered;
+  padding: 9px 11px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.content .side-bar .row3 .TheSongs .row:hover .left i {
+  opacity: 0.9;
+}
+.content .side-bar .row3 .TheSongs .row .center {
+  position: relative;
+  margin: 4px 0 0 -10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.content .side-bar .row3 .TheSongs .row .center p {
+  margin: -4px 0 -8px;
+  font-size: 18px;
+}
+.content .side-bar .row3 .TheSongs .row .center .description {
+  position: relative;
+}
+.content .side-bar .row3 .TheSongs .row .center .description #buttons {
+  margin-left: 30px;
+  position: absolute;
+  left: 200px;
+}
+.content .side-bar .row3 .TheSongs .row .center .description #buttons button {
+  outline: none;
+  border: 1px solid #aaa;
+  opacity: 0;
+  color: #aaa;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.content
+  .side-bar
+  .row3
+  .TheSongs
+  .row:hover
+  .center
+  .description
+  #buttons
+  button {
+  opacity: 0.9;
+}
+.content
+  .side-bar
+  .row3
+  .TheSongs
+  .row
+  .center
+  .description
+  #buttons
+  button:hover {
+  border-color: orangered;
+}
+.content .side-bar .row3 .TheSongs .row .things {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 107px 0 0;
+  margin-top: -5px;
+}
+.content .side-bar .row4 .delete .mobile {
+  color: #bbb;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 66px;
+  border-bottom: 1px solid #bbb;
+}
+.content .side-bar .row4 .delete .mobile .left,
+.content .side-bar .row4 .delete .mobile .right {
+  position: relative;
+  font-size: 15px;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+.content .side-bar .row4 .delete .mobile .left i {
+  position: absolute;
+  font-size: 18px;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  left: -22px;
+}
+.content .side-bar .row4 .delete .mobile .right button {
+  border-radius: 50%;
+  border: none;
+  background-color: #aaa;
+  visibility: hidden;
+  padding: 3px 9px;
+}
+.content .side-bar .row4 .delete .mobile .right i {
+  font-size: 12px;
+  color: white;
+}
+.content .side-bar .row4 .delete:hover .mobile .right button {
+  visibility: visible;
+}
+.content .side-bar .row4 .delete .mobile .right button i:hover {
+  color: black;
+}
+
+.content .side-bar .row4 .download {
+  display: flex;
+  column-gap: 10px;
+  margin: 15px 63px 15px 46px;
+}
+.content .side-bar .row4 .mobile {
+  border-bottom: 1px solid #bbb;
+}
+.content .side-bar .row4 .terms {
+  margin-top: -10px;
+  margin-left: 48px;
+}
+.content .side-bar .row4 .terms .ofService {
+  margin-bottom: 0;
+}
+.content .side-bar .row4 .terms .lang {
+  margin-bottom: 50px;
+}
+.content .side-bar .row4 .terms .ofService {
+  color: #aaa;
+  padding-right: 2px;
+}
+.content .side-bar .row4 .terms .ofService a {
+  text-decoration: none;
+  color: #aaa;
+}
+.content .side-bar .row4 .terms .ofService a:hover {
+  color: #5d5a5a;
+}
+.content .side-bar .row4 .terms .lang a {
+  text-decoration: none;
+}
+.content .side-bar .row4 .terms .lang a:hover {
+  color: black;
 }
