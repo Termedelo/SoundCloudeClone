@@ -84,64 +84,64 @@ body {
   transition: 0.5s;
 }
 .container span .card:nth-child(1) {
-  left: 10px;
+  left: 35px;
 }
 .container span .card:nth-child(2) {
-  left: 190px;
+  left: 215px;
 }
 .container span .card:nth-child(3) {
-  left: 370px;
+  left: 395px;
 }
 .container span .card:nth-child(4) {
-  left: 550px;
+  left: 575px;
 }
 .container span .card:nth-child(5) {
-  left: 730px;
+  left: 755px;
 }
 .container span .card:nth-child(6) {
-  left: 910px;
+  left: 935px;
 }
 .container span .card:nth-child(7) {
-  left: 1090px;
+  left: 1115px;
 }
 .container span .card:nth-child(8) {
-  left: 1270px;
+  left: 1295px;
 }
 .container span .card:nth-child(9) {
-  left: 1450px;
+  left: 1475px;
 }
 .container span .card:nth-child(10) {
-  left: 1630px;
+  left: 1655px;
 }
 .container span .card:nth-child(11) {
-  left: 1820px;
+  left: 1845px;
 }
 .container span .card:nth-child(12) {
-  left: 2010px;
+  left: 2035px;
 }
 .container span .card:nth-child(13) {
-  left: 2200px;
+  left: 2225px;
 }
 .container span .card:nth-child(14) {
-  left: 2390px;
+  left: 2415px;
 }
 .container span .card:nth-child(15) {
-  left: 2580px;
+  left: 2605px;
 }
 .container span .card:nth-child(16) {
-  left: 2770px;
+  left: 2795px;
 }
 .container span .card:nth-child(17) {
-  left: 2960px;
+  left: 2985px;
 }
 .container span .card:nth-child(18) {
-  left: 3150px;
+  left: 3175px;
 }
 .container span .card:nth-child(19) {
-  left: 3340px;
+  left: 3365px;
 }
 .container span .card:nth-child(20) {
-  left: 3530px;
+  left: 3555px;
 }
 @keyframes juggle {
   to {
@@ -210,4 +210,23 @@ body {
   text-align: center;
   margin: 5px 0px;
   font-size: 15px;
+}
+
+/*!added   */
+.main .slider{
+  height: 250px;
+  text-transform: capitalize;
+  overflow: hidden;
+  position: relative;
+    /* the addition */
+  left: 65px;
+  width: 764px;
+}
+.content .row .main h1{
+  font-size: 30px;
+  margin: 20px 0 0;
+  font-weight: 600;
+  /* the addition */
+  position: relative;
+  left: 75px;
 }
