@@ -341,6 +341,7 @@ div.messages.col-1 div.bottom > p {
 }
 .play .row .center .currentTimer {
   left: 6%;
+  color: orangered;
 }
 .play .row .center .remainingTimer {
   left: 95%;

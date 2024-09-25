@@ -130,42 +130,35 @@ deleteSideBarBtn.addEventListener("click", () => {
 let playBar = document.querySelector(".mainSlider #PlayBar");
 let selector = document.querySelector(".mainSlider #selector");
 let progressBar = document.querySelector(".mainSlider .progressBar");
-let currentTimerElement = document.querySelector(
-  ".play .row .center .currentTimer"
+let currentTimerElement = document.querySelector(".play .row .center .currentTimer"
 );
-let remainingTimerElement = document.querySelector(
-  ".play .row .center .remainingTimer"
-);
+let remainingTimerElement = document.querySelector(".play .row .center .remainingTimer");
 playBar.oninput = function () {
   selector.style.left = `${this.value}%`;
   progressBar.style.width = `${this.value}%`;
   currentTimer.innerText = `${formatTime(currentTime)}`;
 };
+///////////////////////////////////////////time formatting///////////////////////////////////////
 // this was done at 2:28 AM
-// Total time in seconds (4 minutes 30 seconds)
-let min = remainingTimerElement.innerText[0];
-let sec = parseInt(
-  remainingTimerElement.innerText[2] + remainingTimerElement.innerText[3]
-);
+let min , sec;
+if (remainingTimerElement.innerText.length >= 5) {
+  min = parseInt(remainingTimerElement.innerText[0] + remainingTimerElement.innerText[1]);
+  sec = parseInt(remainingTimerElement.innerText[3] + remainingTimerElement.innerText[4]);
+} else {
+  min = remainingTimerElement.innerText[0];
+  sec = parseInt(remainingTimerElement.innerText[2] + remainingTimerElement.innerText[3]);
+}
 const totalDuration = min * 60 + sec;
-// Convert seconds to minutes:seconds format
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = seconds % 60;
-  return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  return `${String(minutes)}:${String(secs).padStart(2, "0")}`;
 }
-// Update timers based on playBar value
 function updateTimers() {
-  const currentTime = Math.floor((playBar.value / playBar.max) * totalDuration);
-  const remainingTime = totalDuration - currentTime;
+  const currentTime = Math.floor((playBar.value / 100) * totalDuration);
   currentTimerElement.textContent = formatTime(currentTime);
-  // to edit the remaining time and make it decrease
-  // remainingTimerElement.textContent = formatTime(remainingTime);
 }
-// Add event listener for playBar movement
 playBar.addEventListener("input", updateTimers);
-// Initialize timers
-updateTimers(); // Set initial values
 ///////////////////////////////////////the footer///////////////////////////////////////////////
 let playerBtn = document.querySelector(".play .row .left .controls i:nth-child(2)");
 playerBtn.addEventListener("click", () => {
