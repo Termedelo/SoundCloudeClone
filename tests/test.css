@@ -213,16 +213,16 @@ body {
 }
 
 /*!added   */
-.main .slider{
+.main .slider {
   height: 250px;
   text-transform: capitalize;
   overflow: hidden;
   position: relative;
-    /* the addition */
+  /* the addition */
   left: 65px;
   width: 764px;
 }
-.content .row .main h1{
+.content .row .main h1 {
   font-size: 30px;
   margin: 20px 0 0;
   font-weight: 600;

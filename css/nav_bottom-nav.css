@@ -257,6 +257,138 @@ div.messages.col-1 div.bottom > p {
 .play {
   height: 50px;
   padding: 0px 50px;
-  background-color: #ccc;
+  background-color: #f2f2f2;
+  border-top: solid 1px #bbb;
+}
+.play .row {
+  height: 100%;
+}
+.play .row .left .controls {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+}
+.play .row .left .controls i {
+  cursor: pointer;
+}
+.play .row .left .controls i:not(:nth-child(2)):hover {
+  color: #f50;
+}
+.play .row .center {
+  position: relative;
+}
+.play .row .center .mainSlider {
+  width: 500px;
+  position: relative;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+}
+.play .row .center .mainSlider #PlayBar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  outline: none;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #bbb;
+}
+.play .row .center .mainSlider #PlayBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.play .row .center .mainSlider #selector {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  bottom: -1px;
+  left: 8px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.play .row .center .mainSlider .progressBar {
+  width: 0px;
+  height: 1px;
+  background-color: #f50;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.play .row .center .mainSlider #selector .selectBtn {
+  width: 10px;
+  height: 10px;
+  background-color: #f50;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.play .row .center .currentTimer,
+.play .row .center .remainingTimer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.play .row .center .currentTimer {
+  left: 6%;
+}
+.play .row .center .remainingTimer {
+  left: 95%;
+}
+.play .row .right {
+  display: flex;
+  position: relative;
+  left: 30px;
+}
+.play .row .right img {
+  width: 44px;
+  padding-top: 2px;
+  border-radius: 12px;
+  filter: grayscale(1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.play .row .right img:hover {
+  filter: grayscale(0);
+}
+.play .row .right .footerRightPart h6 {
+  margin: 7px 0 0 10px;
+  color: #aaa;
+}
+.play .row .right .footerRightPart p {
+  margin: 0 0 0 10px;
+  color: #aaa;
+}
+.play .row .right .footerRightPart h6:hover,
+.play .row .right .footerRightPart p:hover {
+  color: #333;
+}
+.play .row .right .footerRightPartIcons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  left: calc(50% + 95px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+}
+.play .row .right .footerRightPart h6,
+.play .row .right .footerRightPart p,
+.play .row .right .footerRightPartIcons i {
+  cursor: pointer;
+}
+.play .row .right .footerRightPartIcons i:hover {
+  color: #f50;
 }
 /* End OF bottom nav */

@@ -1,249 +1,58 @@
-const cardsArr1 = document.querySelectorAll(".main .slider1 span .card");
-const slideRight1 = document.querySelector(".main .slider1 .slideRight");
-const slideLeft1 = document.querySelector(".main .slider1 .slideLeft");
+const MAX_CLICKS = 4;
+const SLIDE_POSITIONS = [0, 460, 900, 1340, 1670];
+const initializeSlider = (slider) => {
+  const cardsArr = slider.querySelectorAll(".card");
+  const slideRight = slider.querySelector(".slideRight");
+  const slideLeft = slider.querySelector(".slideLeft");
+  let remainingRightClicks = MAX_CLICKS;
+  let remainingLeftClicks = 0;
+  let currentMoveIndex = 0;
 
-// what if there are 20 cards?
-let remainingRightClicks1 = 4;
-let remainingLeftClicks1 = 0;
-let TotalNumberOfRightClicks1 = 0;
-let TotalNumberOfLeftClicks1 = 0;
-let move1 = 0;
-slideRight1.addEventListener("click", () => {
-  TotalNumberOfRightClicks1++;
-  TotalNumberOfLeftClicks1--;
-  if (TotalNumberOfRightClicks1 < 4) {
-    if (remainingRightClicks1 > 0) {
-      remainingRightClicks1--;
-      remainingLeftClicks1++;
-      switch (remainingRightClicks1) {
-        case 3:
-          move1 = 575;
-          slideLeft1.style.display = "block";
-          break;
-        case 2:
-          move1 = 1175;
-          slideLeft1.style.display = "block";
-          break;
-        case 1:
-          move1 = 1850;
-          slideRight1.style.display = "none";
-          slideLeft1.style.display = "block";
-          break;
-      }
-      for (let i = 0; i < cardsArr1.length; i++) {
-        cardsArr1[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move1}%)`;
-      }
+  const updateSlideButtons = () => {
+    // update the display of the left and right buttons based on the remaining clicks
+
+    // If remainingLeftClicks is greater than 0, the left button is shown (block), otherwise, it’s hidden.
+    slideLeft.style.display = remainingLeftClicks > 0 ? "block" : "none";
+    // If remainingRightClicks is greater than 0, the right button is shown (block), otherwise, it’s hidden.
+    slideRight.style.display = remainingRightClicks > 0 ? "block" : "none";
+  };
+
+  const moveCards = () => {
+    // move the cards based on the current move index
+    cardsArr.forEach((card) => {
+      // applies a transform to each card based on the current slide position (currentMoveIndex).
+      card.style.transform = `translateY(-50%) translateX(-${SLIDE_POSITIONS[currentMoveIndex]}%)`;
+    });
+  };
+
+  slideRight.addEventListener("click", () => {
+    // check if there are any remaining clicks and move the cards
+    if (remainingRightClicks > 0) {
+      remainingRightClicks--;
+      remainingLeftClicks++;
+      currentMoveIndex++;
+      updateSlideButtons();
+      moveCards();
     }
-  }
-});
+  });
 
-slideLeft1.addEventListener("click", () => {
-  TotalNumberOfRightClicks1--;
-  TotalNumberOfLeftClicks1++;
-  if (TotalNumberOfLeftClicks1 < 4) {
-    if (remainingLeftClicks1 >= 0) {
-      remainingRightClicks1++;
-      remainingLeftClicks1--;
-      switch (remainingLeftClicks1) {
-        case 3:
-          move1 = 1810;
-          slideRight1.style.display = "block";
-          break;
-        case 2:
-          move1 = 1175;
-          slideRight1.style.display = "block";
-          break;
-        case 1:
-          move1 = 575;
-          slideRight1.style.display = "block";
-          break;
-        case 0:
-          move1 = 0;
-          slideRight1.style.display = "block";
-          slideLeft1.style.display = "none";
-          break;
-      }
-      for (let i = 0; i < cardsArr1.length; i++) {
-        cardsArr1[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move1}%)`;
-      }
+  slideLeft.addEventListener("click", () => {
+    // check if there are any remaining clicks and move the cards
+    if (remainingLeftClicks > 0) {
+      remainingRightClicks++;
+      remainingLeftClicks--;
+      currentMoveIndex--;
+      updateSlideButtons();
+      moveCards();
     }
-  }
-});
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Slider2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const cardsArr2 = document.querySelectorAll(".main .slider2 span .card");
-const slideRight2 = document.querySelector(".main .slider2 .slideRight");
-const slideLeft2 = document.querySelector(".main .slider2 .slideLeft");
-
-// what if there are 20 cards?
-let remainingRightClicks2 = 4;
-let remainingLeftClicks2 = 0;
-let TotalNumberOfRightClicks2 = 0;
-let TotalNumberOfLeftClicks2 = 0;
-let move2 = 0;
-slideRight2.addEventListener("click", () => {
-  TotalNumberOfRightClicks2++;
-  TotalNumberOfLeftClicks2--;
-  if (TotalNumberOfRightClicks2 < 4) {
-    if (remainingRightClicks2 > 0) {
-      remainingRightClicks2--;
-      remainingLeftClicks2++;
-      switch (remainingRightClicks2) {
-        case 3:
-          move2 = 575;
-          slideLeft2.style.display = "block";
-          break;
-        case 2:
-          move2 = 1175;
-          slideLeft1.style.display = "block";
-          break;
-        case 1:
-          move2 = 1850;
-          slideRight2.style.display = "none";
-          slideLeft2.style.display = "block";
-          break;
-      }
-      for (let i = 0; i < cardsArr2.length; i++) {
-        cardsArr2[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move2}%)`;
-      }
-    }
-  }
-});
-
-slideLeft2.addEventListener("click", () => {
-  TotalNumberOfRightClicks2--;
-  TotalNumberOfLeftClicks2++;
-  if (TotalNumberOfLeftClicks2 < 4) {
-    if (remainingLeftClicks2 >= 0) {
-      remainingRightClicks2++;
-      remainingLeftClicks2--;
-      switch (remainingLeftClicks2) {
-        case 3:
-          move2 = 1810;
-          slideRight2.style.display = "block";
-          break;
-        case 2:
-          move2 = 1175;
-          slideRight2.style.display = "block";
-          break;
-        case 1:
-          move2 = 575;
-          slideRight2.style.display = "block";
-          break;
-        case 0:
-          move2 = 0;
-          slideRight2.style.display = "block";
-          slideLeft2.style.display = "none";
-          break;
-      }
-      for (let i = 0; i < cardsArr2.length; i++) {
-        cardsArr2[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move2}%)`;
-      }
-    }
-  }
-});
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Slider3!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const cardsArr3 = document.querySelectorAll(".main .slider3 span .card");
-const slideRight3 = document.querySelector(".main .slider3 .slideRight");
-const slideLeft3 = document.querySelector(".main .slider3 .slideLeft");
-
-// what if there are 20 cards?
-let remainingRightClicks3 = 4;
-let remainingLeftClicks3 = 0;
-let TotalNumberOfRightClicks3 = 0;
-let TotalNumberOfLeftClicks3 = 0;
-let move3 = 0;
-slideRight3.addEventListener("click", () => {
-  TotalNumberOfRightClicks3++;
-  TotalNumberOfLeftClicks3--;
-  if (TotalNumberOfRightClicks3 < 4) {
-    if (remainingRightClicks3 > 0) {
-      remainingRightClicks3--;
-      remainingLeftClicks3++;
-      switch (remainingRightClicks3) {
-        case 3:
-          move3 = 575;
-          slideLeft3.style.display = "block";
-          break;
-        case 2:
-          move3 = 1175;
-          slideLeft1.style.display = "block";
-          break;
-        case 1:
-          move3 = 1850;
-          slideRight3.style.display = "none";
-          slideLeft3.style.display = "block";
-          break;
-      }
-      for (let i = 0; i < cardsArr3.length; i++) {
-        cardsArr3[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move3}%)`;
-      }
-    }
-  }
-});
-
-slideLeft3.addEventListener("click", () => {
-  TotalNumberOfRightClicks3--;
-  TotalNumberOfLeftClicks3++;
-  if (TotalNumberOfLeftClicks3 < 4) {
-    if (remainingLeftClicks3 >= 0) {
-      remainingRightClicks3++;
-      remainingLeftClicks3--;
-      switch (remainingLeftClicks3) {
-        case 3:
-          move3 = 1810;
-          slideRight3.style.display = "block";
-          break;
-        case 2:
-          move3 = 1175;
-          slideRight3.style.display = "block";
-          break;
-        case 1:
-          move3 = 575;
-          slideRight3.style.display = "block";
-          break;
-        case 0:
-          move3 = 0;
-          slideRight3.style.display = "block";
-          slideLeft3.style.display = "none";
-          break;
-      }
-      for (let i = 0; i < cardsArr3.length; i++) {
-        cardsArr3[
-          i
-        ].style.transform = `translateY(-50%) translateX(-${move3}%)`;
-      }
-    }
-  }
-});
-
-//! the Right list :
-//# R = 4 , L = 0
-//# [1 , 5] => R = 3 , L = 1 -> -0%
-//# [6 , 10] => R = 2 , L = 2 -> -575%
-//# [11 , 15] => R = 1 , L = 3 -> -1175%
-//# [16 , 20] => R = 0 , L = 4 -> -1810%
-
-//! the left list :
-//# L = 4 , R = 0
-//# [1 , 5] => L = 3 , R = 1
-//# [6 , 10] => L = 2 , R = 2
-//# [11 , 15] => L = 1 , R = 3
-//# [16 , 20] => L = 0 , R = 4
-
+  });
+  // !
+  // update the slide buttons
+  updateSlideButtons();
+};
+document.querySelectorAll(".slider").forEach(initializeSlider);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 //! for the follow Buttons to change on click
-
 const followBtn1 = document.querySelector(".follow1");
 const icon1 = document.querySelector(".icon1");
 const par1 = document.querySelector(".Artist1Par");
@@ -281,7 +90,7 @@ followBtn2.addEventListener("click", () => {
 followBtn3.addEventListener("click", () => {
   follow(followBtn3, icon3, par3);
 });
-//!///////////////////////////////////////////////////////////////////////
+//!///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let row2Arr = document.querySelectorAll(
   ".content .side-bar .row2 .TheSongs .row .center .description #buttons .like"
@@ -302,3 +111,64 @@ function changingColors(Arr) {
 }
 changingColors(row2Arr);
 changingColors(row3Arr);
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+let deleteSideBar = document.querySelector(".content .side-bar .row4 .delete");
+let deleteSideBarBtn = document.querySelector(
+  ".content .side-bar .row4 .delete .mobile .right button"
+);
+let terms = document.querySelector(".content .side-bar .row4 .terms");
+
+deleteSideBarBtn.addEventListener("click", () => {
+  deleteSideBar.style.display = "none";
+  terms.style.marginTop = "20px";
+  terms.style.borderTop = "solid 1px #eee";
+  terms.style.marginLeft = "11px";
+  terms.style.paddingTop = "10px";
+  terms.style.paddingLeft = "10px";
+});
+///////////////////////////////////////////playerBar/////////////////////////////////////////////////////
+let playBar = document.querySelector(".mainSlider #PlayBar");
+let selector = document.querySelector(".mainSlider #selector");
+let progressBar = document.querySelector(".mainSlider .progressBar");
+let currentTimerElement = document.querySelector(
+  ".play .row .center .currentTimer"
+);
+let remainingTimerElement = document.querySelector(
+  ".play .row .center .remainingTimer"
+);
+playBar.oninput = function () {
+  selector.style.left = `${this.value}%`;
+  progressBar.style.width = `${this.value}%`;
+  currentTimer.innerText = `${formatTime(currentTime)}`;
+};
+// this was done at 2:28 AM
+// Total time in seconds (4 minutes 30 seconds)
+let min = remainingTimerElement.innerText[0];
+let sec = parseInt(
+  remainingTimerElement.innerText[2] + remainingTimerElement.innerText[3]
+);
+const totalDuration = min * 60 + sec;
+// Convert seconds to minutes:seconds format
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
+// Update timers based on playBar value
+function updateTimers() {
+  const currentTime = Math.floor((playBar.value / playBar.max) * totalDuration);
+  const remainingTime = totalDuration - currentTime;
+  currentTimerElement.textContent = formatTime(currentTime);
+  // to edit the remaining time and make it decrease
+  // remainingTimerElement.textContent = formatTime(remainingTime);
+}
+// Add event listener for playBar movement
+playBar.addEventListener("input", updateTimers);
+// Initialize timers
+updateTimers(); // Set initial values
+///////////////////////////////////////the footer///////////////////////////////////////////////
+let playerBtn = document.querySelector(".play .row .left .controls i:nth-child(2)");
+playerBtn.addEventListener("click", () => {
+  playerBtn.classList.toggle("fa-play");
+  playerBtn.classList.toggle("fa-pause");
+});

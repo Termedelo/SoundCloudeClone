@@ -10,6 +10,9 @@ body {
   text-transform: capitalize;
   overflow: hidden;
   position: relative;
+  left: 30px;
+  width: 830px;
+  border-bottom: solid 2px #eee;
 }
 .main .slider span {
   display: flex;
@@ -76,71 +79,71 @@ body {
   height: 210px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: 0.5s;
 }
-.main .slider span .card:nth-child(1) {
-  left: 10px;
+.content .row .main .slider span .card:nth-child(1) {
+  left: 35px;
 }
-.main .slider span .card:nth-child(2) {
-  left: 190px;
+.content .row .main .slider span .card:nth-child(2) {
+  left: 200px;
 }
-.main .slider span .card:nth-child(3) {
-  left: 370px;
+.content .row .main .slider span .card:nth-child(3) {
+  left: 365px;
 }
-.main .slider span .card:nth-child(4) {
-  left: 550px;
+.content .row .main .slider span .card:nth-child(4) {
+  left: 530px;
 }
-.main .slider span .card:nth-child(5) {
-  left: 730px;
+.content .row .main .slider span .card:nth-child(5) {
+  left: 695px;
 }
-.main .slider span .card:nth-child(6) {
-  left: 910px;
+.content .row .main .slider span .card:nth-child(6) {
+  left: 860px;
 }
-.main .slider span .card:nth-child(7) {
-  left: 1090px;
+.content .row .main .slider span .card:nth-child(7) {
+  left: 1025px;
 }
-.main .slider span .card:nth-child(8) {
-  left: 1270px;
+.content .row .main .slider span .card:nth-child(8) {
+  left: 1190px;
 }
-.main .slider span .card:nth-child(9) {
-  left: 1450px;
+.content .row .main .slider span .card:nth-child(9) {
+  left: 1355px;
 }
-.main .slider span .card:nth-child(10) {
-  left: 1630px;
+.content .row .main .slider span .card:nth-child(10) {
+  left: 1520px;
 }
-.main .slider span .card:nth-child(11) {
-  left: 1820px;
+.content .row .main .slider span .card:nth-child(11) {
+  left: 1685px;
 }
-.main .slider span .card:nth-child(12) {
-  left: 2010px;
+.content .row .main .slider span .card:nth-child(12) {
+  left: 1850px;
 }
-.main .slider span .card:nth-child(13) {
-  left: 2200px;
+.content .row .main .slider span .card:nth-child(13) {
+  left: 2015px;
 }
-.main .slider span .card:nth-child(14) {
-  left: 2390px;
+.content .row .main .slider span .card:nth-child(14) {
+  left: 2180px;
 }
-.main .slider span .card:nth-child(15) {
-  left: 2580px;
+.content .row .main .slider span .card:nth-child(15) {
+  left: 2345px;
 }
-.main .slider span .card:nth-child(16) {
-  left: 2770px;
+.content .row .main .slider span .card:nth-child(16) {
+  left: 2510px;
 }
-.main .slider span .card:nth-child(17) {
-  left: 2960px;
+.content .row .main .slider span .card:nth-child(17) {
+  left: 2675px;
 }
-.main .slider span .card:nth-child(18) {
-  left: 3150px;
+.content .row .main .slider span .card:nth-child(18) {
+  left: 2840px;
 }
-.main .slider span .card:nth-child(19) {
-  left: 3340px;
+.content .row .main .slider span .card:nth-child(19) {
+  left: 3005px;
 }
-.main .slider span .card:nth-child(20) {
-  left: 3530px;
+.content .row .main .slider span .card:nth-child(20) {
+  left: 3170px;
 }
 @keyframes juggle {
   to {
@@ -214,4 +217,6 @@ body {
   font-size: 30px;
   margin: 20px 0 0;
   font-weight: 600;
+  position: relative;
+  left: 68px;
 }
